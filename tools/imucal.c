@@ -257,7 +257,7 @@ void write_cal()
 
 	for (i = 0; i < 3; i++) {
 			sprintf(buff, "%d\n%d\n", minVal[i], maxVal[i]);
-			write(fd, buff, strlen(buff));
+			int ret = write(fd, buff, strlen(buff));
 	}
 
 	close(fd);
