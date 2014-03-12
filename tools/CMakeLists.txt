@@ -30,5 +30,3 @@ ADD_EXECUTABLE(imucal ${imucal_SRCS} )
 TARGET_LINK_LIBRARIES(imucal linux_mpu9150 m)
 
 INCLUDE_DIRECTORIES( ${linux_mpu9150_INCLUDE_DIRS} "/usr/include")
-INSTALL( FILES "${PROJECT_BINARY_DIR}/bin/imu" DESTINATION "/usr/bin")
-INSTALL( FILES "${PROJECT_BINARY_DIR}/bin/imucal" DESTINATION "/usr/bin")
