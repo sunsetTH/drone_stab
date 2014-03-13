@@ -3,9 +3,9 @@
 
 #include <stdio.h>
 
-#define MOTOR_MAX 	170
-#define MOTOR_MIN 	64
-#define MOTOR_STOP 	63
+#define MOTOR_MAX	170
+#define MOTOR_MIN	64
+#define MOTOR_STOP	63
 
 // Unitary motor description
 typedef struct {
