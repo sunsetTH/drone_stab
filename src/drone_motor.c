@@ -12,18 +12,18 @@ static drone_quad_motor	d_quad_motor;
  */
 int init_motor(drone_motor *motor, int clkw)
 {
-	motor->motor_max 		= MOTOR_MAX;
-	motor->motor_min 		= MOTOR_MIN;
-	motor->motor_stop 		= MOTOR_STOP;
-	motor->motor_current	= MOTOR_STOP;
-	motor->motor_alert		= 0;
+	motor->m_max 		= MOTOR_MAX;
+	motor->m_min 		= MOTOR_MIN;
+	motor->m_stop 		= MOTOR_STOP;
+	motor->m_current	= MOTOR_STOP;
+	motor->m_alert		= 0;
 	
 	if( clkw > 1)
-		motor->motor_clockwise 	= 1;
+		motor->m_clockwise 	= 1;
 	else if( clkw < 0 )
-		motor->motor_clockwise 	= 0;
+		motor->m_clockwise 	= 0;
 	else
-		motor->motor_clockwise	= clkw;
+		motor->m_clockwise	= clkw;
 		
 	return 1;
 }
@@ -37,15 +37,15 @@ int init_motor(drone_motor *motor, int clkw)
  */
 int init_quad_motor()
 {
-	init_motor( &d_quad_motor.motor_front_l, 1 );
-	init_motor( &d_quad_motor.motor_front_r, 0 );
-	init_motor( &d_quad_motor.motor_back_l, 0 );
-	init_motor( &d_quad_motor.motor_back_r, 1 );
+	init_motor( &d_quad_motor.m_front_l, 1 );
+	init_motor( &d_quad_motor.m_front_r, 0 );
+	init_motor( &d_quad_motor.m_back_l, 0 );
+	init_motor( &d_quad_motor.m_back_r, 1 );
 	return 1;
 }
 
 
-int set_cmd_quad_motor(int c_up, int c_rotx, int c_roty, int c_rotz)
+int set_cmd_quad_motor(int c_up, int c_rotx, int c_roty, int c_rotz, int c_stop)
 {
 	
 	return 1;
