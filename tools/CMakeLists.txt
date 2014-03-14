@@ -24,9 +24,9 @@ SET( imucal_SRCS
 )
 
 ADD_EXECUTABLE(imu ${imu_SRCS} )
-TARGET_LINK_LIBRARIES(imu linux_mpu9150 ${M_LIBRARY})
+TARGET_LINK_LIBRARIES(imu linux_mpu9150 m)
 
 ADD_EXECUTABLE(imucal ${imucal_SRCS} )
-TARGET_LINK_LIBRARIES(imucal linux_mpu9150 ${M_LIBRARY})
+TARGET_LINK_LIBRARIES(imucal linux_mpu9150 m)
 
 INCLUDE_DIRECTORIES( ${linux_mpu9150_INCLUDE_DIRS} "/usr/include")

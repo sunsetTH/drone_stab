@@ -25,17 +25,6 @@ SET(EXECUTABLE_OUTPUT_PATH "${DRONE_BINARY_DIR}/bin")
 SET(LIBRARY_OUTPUT_PATH "${DRONE_BINARY_DIR}/lib")
 
 
-## Find requiered Libraries
-FIND_LIBRARY(M_LIBRARY
-    NAMES m
-    PATHS /usr/lib /usr/local/lib /usr/${LIB_INSTALL_DIR}
-)
-IF(NOT M_LIBRARY)
-    MESSAGE(STATUS
-      "math library 'libm' not found - floating point support disabled")
-ENDIF()
-
-
 ADD_SUBDIRECTORY(External_Sources)
 ADD_SUBDIRECTORY(src)
 ADD_SUBDIRECTORY(tools)
